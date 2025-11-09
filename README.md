@@ -1,1 +1,9 @@
-# laravel-api-template
+# このリポジトリについて
+
+LaravelのAPIサーバーのテンプレートリポジトリです。構成は以下です。
+
+- PHP: 8.3
+- Composer: 2.8.2
+- Laravel: 12.0.8
+
+※2025年5月ごろ作成しました

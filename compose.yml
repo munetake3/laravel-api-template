@@ -1,0 +1,23 @@
+services:
+  app:
+    build: ./app
+    image: laravel-api-template
+    container_name: laravel-api-template
+    volumes:
+      - ./app/laravel-api-template:/var/www/html
+    ports:
+      - "8000:8000"
+
+  db:
+    build: ./db
+    image: mysql-template
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./db/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
